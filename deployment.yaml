@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: surveyform-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: surveyform-springboot
+  template:
+    metadata:
+      labels:
+        app: surveyform-springboot
+    spec:
+      containers:
+        - name: surveyform-springboot-container
+          image: atheretu/swe645:01
+          ports:
+            - containerPort: 8080
