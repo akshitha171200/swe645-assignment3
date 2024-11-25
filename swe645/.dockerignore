@@ -1,6 +1,5 @@
-ECHO is on.
 # Ignore everything in the target directory
 /target/*
 
-# But allow JAR files inside target directory
+# Allow JAR files inside the target directory
 !/target/*.jar
