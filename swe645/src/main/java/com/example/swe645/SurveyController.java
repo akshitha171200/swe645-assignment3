@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
 
+
+//Shruthi Pachava - G01459580
+//Harika Gaddam - G01449863
+//Akshitha Theretupally - G01472457
+//Vamsi Krishna Maram - G01478991
+
 @RestController
 @RequestMapping("/api/surveys")
 @Validated
@@ -19,6 +25,7 @@ public class SurveyController {
     @Autowired
     private SurveyRepository surveyRepository;
 
+    // End point to create a new survey
     @PostMapping
     public ResponseEntity<String> createSurvey(@Valid @RequestBody SurveyModel survey) {
     	
@@ -43,11 +50,13 @@ public class SurveyController {
         return ResponseEntity.status(HttpStatus.CREATED).body("Survey created successfully");
     }
     
+    // End point to view all surveys
     @GetMapping
     public List<SurveyEntity> getAllSurveys() {
         return surveyRepository.findAll();
     }
     
+    //End point to view individual survey
     @GetMapping("/{id}")
     public SurveyEntity getSurveyById(@PathVariable Long id) {
         Optional<SurveyEntity> survey = surveyRepository.findById(id);
@@ -58,6 +67,7 @@ public class SurveyController {
         }
     }
     
+    // End point to update a survey
     @PutMapping("/{id}")
     public ResponseEntity<String> updateSurvey(@PathVariable Long id, @RequestBody SurveyModel survey) {
         // Find the survey by id
@@ -95,6 +105,7 @@ public class SurveyController {
         }
     }
     
+    //End point to delete a survey
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteSurvey(@PathVariable Long id) {
         // Check if the survey with the given ID exists

@@ -18,6 +18,10 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+//Shruthi Pachava - G01459580
+//Harika Gaddam - G01449863
+//Akshitha Theretupally - G01472457
+//Vamsi Krishna Maram - G01478991
 
 @Entity
 public class SurveyEntity {

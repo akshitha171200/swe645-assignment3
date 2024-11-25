@@ -6,6 +6,11 @@ import java.util.List;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
+//Shruthi Pachava - G01459580
+//Harika Gaddam - G01449863
+//Akshitha Theretupally - G01472457
+//Vamsi Krishna Maram - G01478991
+
 public class SurveyModel {
 	
 	@NotEmpty(message = "First Name is required")

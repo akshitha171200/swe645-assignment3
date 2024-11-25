@@ -1,3 +1,9 @@
+# Shruthi Pachava - G01459580
+# Harika Gaddam - G01449863
+# Akshitha Theretupally - G01472457
+# Vamsi Krishna Maram - G01478991
+
+# Kubernetes deployment file for cluster1 using docker image
 apiVersion: apps/v1
 kind: Deployment
 metadata:
