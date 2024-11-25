@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/surveys")
 @Validated
@@ -18,7 +20,7 @@ public class SurveyController {
     private SurveyRepository surveyRepository;
 
     @PostMapping
-    public ResponseEntity<String> createSurvey(@RequestBody SurveyModel survey) {
+    public ResponseEntity<String> createSurvey(@Valid @RequestBody SurveyModel survey) {
     	
     	SurveyEntity surveyObject = new SurveyEntity();
     	surveyObject.setCity(survey.getCity());

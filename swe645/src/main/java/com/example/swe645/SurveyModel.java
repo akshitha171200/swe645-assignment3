@@ -3,30 +3,40 @@ package com.example.swe645;
 import java.util.Date;
 import java.util.List;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+
 public class SurveyModel {
 	
+	@NotEmpty(message = "First Name is required")
     private String firstName;
 
+    @NotEmpty(message = "Last Name is required")
     private String lastName;
 
+    @NotEmpty(message = "Street Address is required")
     private String streetAddress;
 
+    @NotEmpty(message = "City is required")
     private String city;
 
+    @NotEmpty(message = "State is required")
     private String state;
 
+    @NotNull(message = "Zip code is required")
     private Integer zip;
 
+    @NotNull(message = "Telephone number is required")
     private Long telephoneNumber;
 
+    @NotEmpty(message = "Email is required")
     private String email;
 
     private List<String> likedMost;
-
     private String sourceOfInterest;
-
     private String likelihood;
 
+    @NotNull(message = "Date of Survey is required")
     private Date dateOfSurvey;
 
 	public String getFirstName() {

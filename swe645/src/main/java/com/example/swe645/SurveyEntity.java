@@ -22,25 +22,33 @@ import jakarta.validation.constraints.Size;
 @Entity
 public class SurveyEntity {
 
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long surveyId;
 
+    @NotEmpty(message = "First Name is required")
     private String firstName;
 
+    @NotEmpty(message = "Last Name is required")
     private String lastName;
 
+    @NotEmpty(message = "Street Address is required")
     private String streetAddress;
 
+    @NotEmpty(message = "City is required")
     private String city;
 
+    @NotEmpty(message = "State is required")
     private String state;
 
+    @NotNull(message = "Zip code is required")
     private Integer zip;
 
+    @NotNull(message = "Telephone number is required")
     private Long telephoneNumber;
 
-    @Email
+    @Email(message = "Email should be valid")
+    @NotEmpty(message = "Email is required")
     private String email;
 
     private String likedMost;
@@ -49,8 +57,10 @@ public class SurveyEntity {
 
     private String likelihood;
 
+    @NotNull(message = "Date of Survey is required")
     @Temporal(TemporalType.DATE)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
+    
     private Date dateOfSurvey;
 
 	public Long getSurveyId() {
