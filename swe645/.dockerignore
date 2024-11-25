@@ -1,5 +1,0 @@
-# Ignore everything in the target directory
-/target/*
-
-# Allow JAR files inside the target directory
-!/target/*.jar
