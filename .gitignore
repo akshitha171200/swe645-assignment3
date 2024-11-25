@@ -1,2 +1,4 @@
 ECHO is on.
-target/*.jar
+# Ignore the target folder, but allow JAR files to be added temporarily for Docker build
+/target/*
+!/target/*.jar
