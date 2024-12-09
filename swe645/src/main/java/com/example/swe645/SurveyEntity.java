@@ -62,10 +62,10 @@ public class SurveyEntity {
     private String likelihood;
 
     @NotNull(message = "Date of Survey is required")
-    @Temporal(TemporalType.DATE)
+//    @Temporal(TemporalType.DATE)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
     
-    private Date dateOfSurvey;
+    private String dateOfSurvey;
 
 	public Long getSurveyId() {
 		return surveyId;
@@ -163,11 +163,11 @@ public class SurveyEntity {
 		this.likelihood = likelihood;
 	}
 
-	public Date getDateOfSurvey() {
+	public String getDateOfSurvey() {
 		return dateOfSurvey;
 	}
 
-	public void setDateOfSurvey(Date dateOfSurvey) {
+	public void setDateOfSurvey(String dateOfSurvey) {
 		this.dateOfSurvey = dateOfSurvey;
 	}
 

@@ -3,6 +3,8 @@ package com.example.swe645;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
@@ -42,7 +44,7 @@ public class SurveyModel {
     private String likelihood;
 
     @NotNull(message = "Date of Survey is required")
-    private Date dateOfSurvey;
+    private String dateOfSurvey;
 
 	public String getFirstName() {
 		return firstName;
@@ -132,11 +134,11 @@ public class SurveyModel {
 		this.likelihood = likelihood;
 	}
 
-	public Date getDateOfSurvey() {
+	public String getDateOfSurvey() {
 		return dateOfSurvey;
 	}
 
-	public void setDateOfSurvey(Date dateOfSurvey) {
+	public void setDateOfSurvey(String dateOfSurvey) {
 		this.dateOfSurvey = dateOfSurvey;
 	}
 
